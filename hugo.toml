@@ -1,5 +1,7 @@
-baseURL = 'https://www.esmeraldamartinez.com/'
-languageCode = 'en-us'
+baseURL = "https://www.esmeraldamartinez.dev/"
+canonifyURLs = true
+relativeURLs = false
+languageCode = "en-us"
 title = 'Esmeralda Martinez'
 
 [params]
