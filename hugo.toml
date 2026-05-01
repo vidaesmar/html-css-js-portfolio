@@ -1,0 +1,6 @@
+baseURL = 'https://vidaesmar.github.io/html-css-js-portfolio/'
+languageCode = 'en-us'
+title = 'Esmeralda Martinez'
+
+[params]
+    description = "Cloud Engineer | IAM Specialist | Full-Stack Developer"

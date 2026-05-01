@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    
+    {{ $style := resources.Get "css/main.css" | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-top">
+            {{ if .IsHome }}
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/vidaesmar">
+                        <img src="/html-css-js-portfolio/images/linkedin.png" alt="LN" class="sidebar-icon">
+                    </a>
+                    <a href="https://github.com/vidaesmar">
+                        <img src="/html-css-js-portfolio/images/github.png" alt="GH" class="sidebar-icon">
+                    </a>
+                    <a href="https://discord.com/channels/@vidaesmar">
+                        <img src="/html-css-js-portfolio/images/discord.png" alt="GH" class="sidebar-icon">
+                    </a>
+                    <a href="https://www.instagram.com/vidaesmar/">
+                        <img src="/html-css-js-portfolio/images/instagram.png" alt="GH" class="sidebar-icon">
+                    </a>
+                </div>
+            {{ else }}
+                <a href="/" class="vertical-nav-link">HOME</a>
+            {{ end }}
+        </div>
+        </aside>
+
+    <main class="content-area">
+        {{ block "main" . }}{{ end }}
+    </main>
+</body>
+</html>
